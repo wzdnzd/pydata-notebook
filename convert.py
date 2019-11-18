@@ -1,4 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# @Author  : wzdnzd
+# @Time    : 2019-11-18
+
+
 import os
+import shutil
 import argparse
 
 PATH = os.path.abspath(os.path.dirname(__file__))
@@ -8,7 +16,7 @@ def convert(extends):
     output = os.path.join(PATH, extends)
 
     if os.path.exists(output):
-        os.remove(output)
+        shutil.rmtree(output)
 
     os.makedirs(output)
 
@@ -26,5 +34,5 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='convert ".ipynb" file to ".html" or ".pdf"')
     parser.add_argument('-f', '--format', type=str, required=True,
-                        choices=['html', 'pdf'], default='html', help='format')
+                        choices=['html', 'pdf', 'md'], default='html', help='format')
     convert(parser.parse_args())

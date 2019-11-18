@@ -25,11 +25,11 @@
 
 我的翻译行为完全是出于自己的兴趣，并没有经过国内出版社的授权。经一些朋友的提醒，国外的作者本人是不享有翻译权的，即使我获得了原作者的许可，也不能私自进行翻译。而且国内已经有译者获得了本书的翻译权，中文版也快要面世了。所以我会和国内的出版社联系，看能否给本书的出版出一份力，如果无法合作的话，我会删除整个项目。希望大家支持正版，尊重国内译者的劳动成果。
 
-## .ipynb文件转html或者pdf
+## `.ipynb`文件转`.html`、`.md` 或者`.pdf`
 
 + 安装nbconvert: `pip install nbconvert`
 + 安装pandoc: [https://pandoc.org/installing.html](https://pandoc.org/installing.html)
-+ 命令行工具里执行如下命令：`python convert.py -f html` 或者 `python convert.py -f pdf`
++ 命令行工具里执行如下命令：`python convert.py -f html` 或者 `python convert.py -f md` 或者 `python convert.py -f pdf`
 
 注：若想转换为pdf文件，还需安装[texlive-full](https://www.tug.org/texlive/acquire-netinstall.html)，否则会报如下错误：
 ![错误](https://img-blog.csdn.net/20170617151951475?)
